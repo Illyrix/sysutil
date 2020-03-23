@@ -54,7 +54,7 @@ func (d *DiagnosticsServer) SearchLog(req *pb.SearchLogRequest, stream pb.Diagno
 	}
 	var levelFlag int64
 	for _, l := range req.Levels {
-		levelFlag |= 1 << l
+		levelFlag |= 1 << uint(l)
 	}
 	var patterns []*regexp.Regexp
 	for _, p := range req.Patterns {

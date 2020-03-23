@@ -288,7 +288,7 @@ nextLine:
 		if item.Time < iter.begin {
 			continue
 		}
-		if iter.levelFlag != 0 && iter.levelFlag&(1<<item.Level) == 0 {
+		if iter.levelFlag != 0 && iter.levelFlag&(1<<uint(item.Level)) == 0 {
 			continue
 		}
 		if len(iter.patterns) > 0 {
